@@ -1,0 +1,7 @@
+FROM node:14.17.5-slim
+RUN npm install -g http-server  # e.g http-server ./dist -p 8080
+RUN npm install -g @vue/cli     # e.g vue create <project-name> OR yarn create nuxt-app <project-name>
+WORKDIR /app
+EXPOSE 3000
+ENV NUXT_HOST=0.0.0.0
+ENV NUXT_PORT=3000
